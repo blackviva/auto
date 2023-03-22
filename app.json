@@ -1,0 +1,57 @@
+{
+  "name": "Approve All Requests Bot",
+  "description": "Approve all requests bot",
+  "keywords": [
+    "telegram",
+    "approve",
+    "join",
+    "requests",
+  ],
+  "repository": "https://github.com/",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "1250450587"
+    },
+    "API_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": ""
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": ""
+    },
+    "SESSION_STRING":{
+      "description": "your telegram account session string ",
+      "value": ""
+    },
+    "WLECOME_TEXT":{
+      "description": "custom welcome text",
+      "value": ""
+    },
+    "DATABASE_URI":{
+      "description": "Mongo DB URL",
+      "value": "-100"
+    },
+    "AUTH_CHANNEL": {
+      "description": "Channel Id where you want to approve join Requests",
+      "value": "-100"
+    },
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
+
